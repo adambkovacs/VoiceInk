@@ -315,34 +315,33 @@ struct VoiceInkApp: App {
 
 class UpdaterViewModel: ObservableObject {
     @AppStorage("autoUpdateCheck") private var autoUpdateCheck = true
-    
+
     private let updaterController: SPUStandardUpdaterController
-    
+
     @Published var canCheckForUpdates = false
-    
+
     init() {
-        updaterController = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: nil, userDriverDelegate: nil)
-        
-        // Enable automatic update checking
-        updaterController.updater.automaticallyChecksForUpdates = autoUpdateCheck
-        updaterController.updater.updateCheckInterval = 24 * 60 * 60
-        
-        updaterController.updater.publisher(for: \.canCheckForUpdates)
-            .assign(to: &$canCheckForUpdates)
+        // Self-built version: Disable auto-updates to prevent overwriting with official version
+        updaterController = SPUStandardUpdaterController(startingUpdater: false, updaterDelegate: nil, userDriverDelegate: nil)
+
+        // Disable automatic update checking for self-built version
+        updaterController.updater.automaticallyChecksForUpdates = false
+        updaterController.updater.updateCheckInterval = 0
+
+        // Always report that we can't check for updates
+        canCheckForUpdates = false
     }
-    
+
     func toggleAutoUpdates(_ value: Bool) {
-        updaterController.updater.automaticallyChecksForUpdates = value
+        // Self-built version: No-op
     }
-    
+
     func checkForUpdates() {
-        // This is for manual checks - will show UI
-        updaterController.checkForUpdates(nil)
+        // Self-built version: No-op - don't check for updates
     }
-    
+
     func silentlyCheckForUpdates() {
-        // This checks for updates in the background without showing UI unless an update is found
-        updaterController.updater.checkForUpdatesInBackground()
+        // Self-built version: No-op - don't check for updates
     }
 }
 
