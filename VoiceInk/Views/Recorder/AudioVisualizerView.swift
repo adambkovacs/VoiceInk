@@ -38,6 +38,12 @@ struct AudioVisualizer: View {
                     .frame(width: barWidth, height: barHeights[index])
             }
         }
+        .onAppear {
+            // Handle initial value when view is created
+            if isActive {
+                updateBars(with: Float(audioMeter.averagePower))
+            }
+        }
         .onChange(of: audioMeter) { _, newValue in
             if isActive {
                 updateBars(with: Float(newValue.averagePower))
