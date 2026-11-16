@@ -3,20 +3,19 @@
     <channel>
         <title>VoiceInk</title>
         <item>
-            <title>1.64</title>
-            <pubDate>Sat, 06 Dec 2025 08:29:15 +0545</pubDate>
-            <sparkle:version>164</sparkle:version>
-            <sparkle:shortVersionString>1.64</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <description><![CDATA[
-
-                <h3>What's New in Version 1.64</h3>
-                <ul>
-                    <li>Fix virtual audio devices not being detected for recording</li>
-                </ul>
-
-            ]]></description>
-            <enclosure url="https://github.com/Beingpax/VoiceInk/releases/download/v1.64/VoiceInk.dmg" length="24629784" type="application/octet-stream" sparkle:edSignature="wOstprSNj4i41nw48VWU+1uxvr7LVvz4mTyMtKz559Q7SAYNt9f74+yAUFsR4owme4xrDiLO7z+j2QMsxrjnBw=="/>
+            <title>2.27</title>
+            <pubDate>Wed, 11 Nov 2026 10:11:05 +0545</pubDate>
+            <sparkle:version>227</sparkle:version>
+            <sparkle:shortVersionString>2.27</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<h3>What's New in VoiceInk 2.27</h3>
+<ul>
+  <li>Added ElevenLabs Scribe V3 support.</li>
+  <li>Keep the display awake during active dictation (by <a href="https://github.com/ofa1">@ofa1</a>).</li>
+  <li>Performance fixes and improvements by <a href="https://github.com/wotschofsky">@wotschofsky</a>.</li>
+</ul>
+]]></description>
+            <enclosure url="https://github.com/Beingpax/VoiceInk/releases/download/v2.27/VoiceInk.dmg" length="39307531" type="application/octet-stream" sparkle:edSignature="nYg43djgKgFyL7D2NU7OhjlY4Z050v6rRlDtYzqMNzCgx7XfLapDTXQvpFXDEZI1lLWYoWBqGGomps5C3nJJBg=="/>
         </item>
     </channel>
 </rss>
